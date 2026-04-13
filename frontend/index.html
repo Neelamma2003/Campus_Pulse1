@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Pulse Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🎓 Campus Pulse Dashboard</h1>
+
+    <div class="controls">
+        <select id="facility">
+            <option value="">All Facilities</option>
+            <option>Library</option>
+            <option>Cafeteria</option>
+            <option>Sports</option>
+            <option>Hostel</option>
+        </select>
+
+        <select id="year">
+            <option value="">All Years</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            <option>4th</option>
+        </select>
+
+        <select id="major">
+            <option value="">All Majors</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>MECH</option>
+            <option>CIVIL</option>
+        </select>
+
+        <button onclick="loadData()">Apply</button>
+    </div>
+</div>
+
+<!-- METRICS -->
+<div class="metrics">
+    <div class="card" id="avg">⭐ Avg: -</div>
+    <div class="card" id="high">🔥 High: -</div>
+    <div class="card" id="low">❄ Low: -</div>
+    <div class="card" id="top">🏆 Top: -</div>
+</div>
+
+<!-- CHARTS -->
+<div class="grid">
+    <div class="chart-box"><canvas id="barChart"></canvas></div>
+    <div class="chart-box"><canvas id="pieChart"></canvas></div>
+    <div class="chart-box"><canvas id="yearChart"></canvas></div>
+    <div class="chart-box"><canvas id="majorChart"></canvas></div>
+    <div class="chart-box full"><canvas id="lineChart"></canvas></div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="insight" id="insightBox"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
